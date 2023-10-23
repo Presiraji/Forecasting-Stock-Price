@@ -1,6 +1,5 @@
 
-
-
+pip install yfinance
 import time
 import yfinance as yf
 import streamlit as st
