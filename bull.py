@@ -52,13 +52,13 @@ ALPHA = ALPHA1.history(period='1d', start=start_date, end=end_date)
 # Display closing price chart with adjustable size
 st.write("## Closing Price")
 fig1 = px.line(ALPHA, y='Close', title='Closing Price')
-fig1.update_layout(autosize=False, width=1200, height=700)
+fig1.update_layout(autosize=True, height=700)
 st.plotly_chart(fig1, use_container_width=False)
 
 # Display volume chart with adjustable size
 st.write("## Volume Price")
 fig2 = px.line(ALPHA, y='Volume', title='Volume Price')
-fig2.update_layout(autosize=False, width=1200, height=700)
+fig2.update_layout(autosize=True, height=700)
 st.plotly_chart(fig2, use_container_width=False)
 
 import streamlit as st
@@ -206,7 +206,7 @@ if st.button('Run SARIMAX Model'):
     fig2.update_layout(grid=dict(rows=1, columns=1), plot_bgcolor='rgba(0,0,0,0)')
     fig2.update_xaxes(showgrid=True, gridwidth=1, gridcolor='lightgrey')
     fig2.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgrey')
-    fig2.update_layout(autosize=False, width=1200, height=700)
+    fig2.update_layout(autosize=True, height=700)
     st.plotly_chart(fig2, use_container_width=False)
     progress_bar.progress(98)
 
@@ -246,7 +246,7 @@ if st.button('Run SARIMAX Model'):
     # Setting the layout of the chart, with a specified width and height.
     # autosize=False: Disabling autosize to manually set the size of the chart.
     # width=1200 and height=700: Setting the width and height of the chart.
-    fig1.update_layout(autosize=False, width=1200, height=700)
+    fig2.update_layout(autosize=True, height=700)
 
     # Using Streamlit to display the chart on the web application.
     # use_container_width=False: Specifying that the chart should not adjust its width to the container.
