@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 
 
 st.write("""
-# Forecasting Future Value - Stay Goated
+# Forecasting Future Value - By Raj Ghotra
 
 Enter the stock symbol and select a date range to view the stock closing prices and volume.
 """)
@@ -23,8 +23,13 @@ tickerSymbol = st.text_input("Enter Stock Ticker:", "SPY").upper()
 import streamlit as st
 
 # Slider for the S
-st.write('Seasonal Period (s): This is the length of the seasonal cycle. For monthly data with an annual pattern, s would be 12. For quarterly data, s might be 4. But for Daily we use 22 as in 22 trading days in one month')
-
+st.write('The S is Seasonality meaning the metric of each season in your Data
+st.write('Example, S=12 for every 12 days or S=22 for every 22 trading days in one month')
+st.write('Recommended to use 5 years of stock data to get accurate prediction')
+st.write('This does not take account of natural disasters such as Pandemics and World Wars')
+st.write('Designed and Implemented by Raj Ghotra')
+st.write('In order to play the lottery you have to buy the ticket')
+st.write('using more Data of 5 years or more will take more time for modeling')
 # Adding a slider
 S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=12)
 
@@ -226,7 +231,7 @@ if st.button('Run SARIMAX Model'):
 
     # Selecting the last 756 rows of the DataFrame df2 to focus on more recent data.
     # This assumes that df2 is a Pandas DataFrame holding stock price information.
-    df2_sub = df2[-756:]
+    df2_sub = df2[-252:]
 
     # Converting the index of df2_sub to datetime format to ensure proper alignment and plotting.
     df2_sub.index = pd.to_datetime(df2_sub.index)
@@ -246,7 +251,7 @@ if st.button('Run SARIMAX Model'):
     # Setting the layout of the chart, with a specified width and height.
     # autosize=False: Disabling autosize to manually set the size of the chart.
     # width=1200 and height=700: Setting the width and height of the chart.
-    fig2.update_layout(autosize=True,width=300, height=300)
+    fig2.update_layout(autosize=False,width=300, height=300)
 
     # Using Streamlit to display the chart on the web application.
     # use_container_width=False: Specifying that the chart should not adjust its width to the container.
