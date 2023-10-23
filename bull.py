@@ -146,6 +146,7 @@ if st.button('Run SARIMAX Model'):
     
     #Predict the Future
     pred_future = model_fit.predict(start=end, end=end+15)
+    length = len(pred_future)
     progress_bar.progress(87)
     
    # Importing the datetime module to work with dates.
@@ -164,11 +165,12 @@ if st.button('Run SARIMAX Model'):
     progress_bar.progress(90)
 
     # Generating a list of 23 consecutive dates starting from 'start_date'.
-    dates = [start_date + datetime.timedelta(days=idx) for idx in range(22)]
+    dates = [start_date + datetime.timedelta(days=idx) for idx in range(30)]  # Increased range to ensure enough market dates
     progress_bar.progress(91)
 
     # Filtering out the weekend dates from the 'dates' list.
-    market_dates = [date for date in dates if date.weekday() < 5]
+    market_dates = [date for date in dates if date.weekday() < 5][:len(pred_future)]  # Use only the first len(pred_future) market dates
+
     progress_bar.progress(92)
 
     # Creating a pandas series with 'pred_future' values and 'market_dates' as index.
