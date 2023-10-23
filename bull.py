@@ -246,7 +246,7 @@ if st.button('Run SARIMAX Model'):
     # Setting the layout of the chart, with a specified width and height.
     # autosize=False: Disabling autosize to manually set the size of the chart.
     # width=1200 and height=700: Setting the width and height of the chart.
-    fig2.update_layout(autosize=True,width=400, height=400)
+    fig2.update_layout(autosize=True,width=300, height=300)
 
     # Using Streamlit to display the chart on the web application.
     # use_container_width=False: Specifying that the chart should not adjust its width to the container.
