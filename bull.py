@@ -206,7 +206,7 @@ if st.button('Run SARIMAX Model'):
     fig2.update_layout(grid=dict(rows=1, columns=1), plot_bgcolor='rgba(0,0,0,0)')
     fig2.update_xaxes(showgrid=True, gridwidth=1, gridcolor='lightgrey')
     fig2.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgrey')
-    fig2.update_layout(autosize=True, height=700)
+    fig2.update_layout(autosize=True,width=400 height=400)
     st.plotly_chart(fig2, use_container_width=False)
     progress_bar.progress(98)
 
