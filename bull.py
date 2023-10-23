@@ -52,13 +52,13 @@ ALPHA = ALPHA1.history(period='1d', start=start_date, end=end_date)
 # Display closing price chart with adjustable size
 st.write("## Closing Price")
 fig1 = px.line(ALPHA, y='Close', title='Closing Price')
-fig1.update_layout(autosize=True,width=300, height=300)
+fig1.update_layout(autosize=True,width=400, height=400)
 st.plotly_chart(fig1, use_container_width=False)
 
 # Display volume chart with adjustable size
 st.write("## Volume Price")
 fig2 = px.line(ALPHA, y='Volume', title='Volume Price')
-fig2.update_layout(autosize=True, height=700)
+fig2.update_layout(autosize=True,width=400, height=400)
 st.plotly_chart(fig2, use_container_width=False)
 
 import streamlit as st
