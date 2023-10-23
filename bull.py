@@ -1,5 +1,4 @@
 
-pip install yfinance
 import time
 import yfinance as yf
 import streamlit as st
@@ -10,6 +9,8 @@ from statsmodels.tsa.arima.model import ARIMA
 from pmdarima import auto_arima
 
 st.set_page_config(layout="wide")
+
+
 st.write("""
 # Forecasting Future Value - Stay Goated
 
@@ -35,9 +36,13 @@ st.write('The current value of S is:', S)
 start_date = st.date_input("Start Date YYYY-MM_DD", pd.to_datetime("2021-10-09"))
 end_date = st.date_input("End Date YYYY-MM_DD ", pd.to_datetime("2023-10-09"))
 
+
+if st.button('Reload Data'):
+
 # Display user inputs
-st.write(f"Showing data for: {tickerSymbol}")
+    st.write(f"Showing data for: {tickerSymbol}")
 st.write(f"From: {start_date} to: {end_date}")
+
 
 # get data on this ticker
 ALPHA1 = yf.Ticker(tickerSymbol)
