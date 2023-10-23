@@ -26,15 +26,15 @@ import streamlit as st
 st.write('Seasonal Period (s): This is the length of the seasonal cycle. For monthly data with an annual pattern, s would be 12. For quarterly data, s might be 4. But for Daily we use 22 as in 22 trading days in one month')
 
 # Adding a slider
-S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=22)
+S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=12)
 
 # Display the chosen value
 st.write('The current value of S is:', S)
 
 
 # User input for start and end dates
-start_date = st.date_input("Start Date YYYY-MM_DD", pd.to_datetime("2021-10-09"))
-end_date = st.date_input("End Date YYYY-MM_DD ", pd.to_datetime("2023-10-09"))
+start_date = st.date_input("Start Date YYYY-MM_DD", pd.to_datetime("2018-10-19"))
+end_date = st.date_input("End Date YYYY-MM_DD ", pd.to_datetime("2023-10-20"))
 
 
 if st.button('Reload Data'):
