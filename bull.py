@@ -1,4 +1,6 @@
 
+
+
 import time
 import yfinance as yf
 import streamlit as st
@@ -10,7 +12,7 @@ from pmdarima import auto_arima
 
 st.set_page_config(layout="wide")
 st.write("""
-# Stock Price App
+# Forecasting Future Value - Stay Goated
 
 Enter the stock symbol and select a date range to view the stock closing prices and volume.
 """)
