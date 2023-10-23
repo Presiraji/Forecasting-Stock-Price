@@ -1,3 +1,4 @@
+pip install yfinance
 streamlit
 pandas
 numpy
