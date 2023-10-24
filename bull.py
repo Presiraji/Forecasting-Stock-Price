@@ -23,13 +23,11 @@ tickerSymbol = st.text_input("Enter Stock Ticker:", "SPY").upper()
 import streamlit as st
 
 # Slider for the S
-st.write('using more Data of 5 years or more will take more time for modeling')
-
-st.write('Recommended to use 5 years of stock data to get accurate prediction')
+st.write('How to use, is to predict market and test it using Paper Money NOT Real Money')
+st.write('Paper trading is using play money which is offered by MarketWatch or ETrade etc.')
 st.write('This does not take account of natural disasters such as Pandemics and World Wars')
-st.write('Designed and Implemented by Raj Ghotra')
-st.write('In order to play the lottery you have to buy the ticket')
-# Adding a slider
+st.write('using more Data of 5.5 years or more will take more time for modeling')
+st.write('Recommended to use 5 or less years of stock data to get accurate prediction')
 st.write('The S is Seasonality meaning the metric of each season in your Data')
 st.write('Example, S=12 for every 12 days or S=22 for every 22 trading days in one month')
 S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=12)
