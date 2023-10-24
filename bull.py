@@ -12,9 +12,9 @@ st.set_page_config(layout="wide")
 
 
 st.write("""
-# Forecasting Future Value - By Raj Ghotra
+# Forecasting Close Value - By Raj Ghotra
 
-Enter the stock symbol and select a date range to view the stock closing prices and volume.
+Enter the stock symbol and select a date range to view the stock Closing prices and volume.
 """)
 
 # User input for the ticker symbol
@@ -23,14 +23,15 @@ tickerSymbol = st.text_input("Enter Stock Ticker:", "SPY").upper()
 import streamlit as st
 
 # Slider for the S
-st.write('The S is Seasonality meaning the metric of each season in your Data
-st.write('Example, S=12 for every 12 days or S=22 for every 22 trading days in one month')
+st.write('using more Data of 5 years or more will take more time for modeling')
+
 st.write('Recommended to use 5 years of stock data to get accurate prediction')
 st.write('This does not take account of natural disasters such as Pandemics and World Wars')
 st.write('Designed and Implemented by Raj Ghotra')
 st.write('In order to play the lottery you have to buy the ticket')
-st.write('using more Data of 5 years or more will take more time for modeling')
 # Adding a slider
+st.write('The S is Seasonality meaning the metric of each season in your Data')
+st.write('Example, S=12 for every 12 days or S=22 for every 22 trading days in one month')
 S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=12)
 
 # Display the chosen value
