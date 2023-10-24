@@ -30,7 +30,7 @@ st.write('using more Data of 5.5 years or more will take more time for modeling'
 st.write('Recommended to use 5 or less years of stock data to get accurate prediction')
 st.write('The S is Seasonality meaning the metric of each season in your Data')
 st.write('Example, S=12 for every 12 days or S=22 for every 22 trading days in one month')
-S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=12)
+S = st.slider('Choose a value for S:', min_value=12, max_value=252, value=30)
 
 # Display the chosen value
 st.write('The current value of S is:', S)
