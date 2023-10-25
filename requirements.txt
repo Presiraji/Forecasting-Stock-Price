@@ -1,5 +1,4 @@
 yfinance
-streamlit
 pandas
 numpy
 matplotlib
@@ -11,6 +10,4 @@ datetime
 reportlab
 streamlit
 datetime
-tempfile
-base64
 
