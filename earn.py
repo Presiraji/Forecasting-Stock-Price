@@ -36,7 +36,7 @@ ALPHA = ALPHA1.history(period='1d', start=start_date, end=end_date)
 # Display closing price chart with adjustable size
 st.write("## Closing Price")
 fig1 = px.line(ALPHA, y='Close', title='Closing Price')
-fig1.update_layout(autosize=True, height=400)
+fig1.update_layout(autosize=True,width=400, height=400)
 st.plotly_chart(fig1, use_container_width=False)
 
 
@@ -55,7 +55,7 @@ ALPHA = ALPHA1.history(period='1d', start=start_date, end=end_date)
 # Display closing price chart with adjustable size
 st.write("## Closing Price")
 fig1 = px.line(ALPHA, y='Close', title='Closing Price')
-fig1.update_layout(autosize=True, height=400)
+fig1.update_layout(autosize=True,width=400, height=400)
 st.plotly_chart(fig1, use_container_width=False)
 
 
@@ -74,7 +74,7 @@ ALPHA = ALPHA1.history(period='1d', start=start_date, end=end_date)
 # Display closing price chart with adjustable size
 st.write("## Closing Price")
 fig1 = px.line(ALPHA, y='Close', title='Closing Price')
-fig1.update_layout(autosize=True, height=400)
+fig1.update_layout(autosize=True,width=400, height=400)
 st.plotly_chart(fig1, use_container_width=False)
 
 
@@ -93,5 +93,5 @@ ALPHA = ALPHA1.history(period='1d', start=start_date, end=end_date)
 # Display closing price chart with adjustable size
 st.write("## Closing Price")
 fig1 = px.line(ALPHA, y='Close', title='Closing Price')
-fig1.update_layout(autosize=True, height=400)
+fig1.update_layout(autosize=True,width=400, height=400)
 st.plotly_chart(fig1, use_container_width=False)
