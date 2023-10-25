@@ -10,4 +10,5 @@ datetime
 reportlab
 streamlit
 datetime
+kaleido
 
