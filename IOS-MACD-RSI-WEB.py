@@ -141,8 +141,9 @@ st.write("## MACD & Signal Line")
 fig_macd = go.Figure()
 fig_macd.add_trace(go.Scatter(x=a.index[-200:], y=a['MACD'][-200:], mode='lines', name='MACD'))
 fig_macd.add_trace(go.Scatter(x=a.index[-200:], y=a['Signal_Line'][-200:], mode='lines', name='Signal Line', line=dict(dash='dash')))
-fig_macd.update_layout(title='MACD & Signal Line', autosize=True,width=350, height=350)
+fig_macd.update_layout(title='MACD & Signal Line', autosize=True,width=350, height=350, showlegend=False)
 st.plotly_chart(fig_macd, use_container_width=False)
+
 
 # RSI Plot
 st.write("## Relative Strength Index (RSI)")
@@ -150,7 +151,7 @@ fig_rsi = go.Figure()
 fig_rsi.add_trace(go.Scatter(x=a.index[-200:], y=a['RSI'][-200:], mode='lines', name='RSI'))
 fig_rsi.add_shape(type='line', line=dict(dash='dash', color='red'), y0=70, y1=70, x0=a.index[-200], x1=a.index[-1])
 fig_rsi.add_shape(type='line', line=dict(dash='dash', color='green'), y0=30, y1=30, x0=a.index[-200], x1=a.index[-1])
-fig_rsi.update_layout(title='Relative Strength Index (RSI)', autosize=True,width=350, height=350)
+fig_rsi.update_layout(title='Relative Strength Index (RSI)', autosize=True,width=350, height=350, showlegend=False)
 st.plotly_chart(fig_rsi, use_container_width=False)
 
 # Bollinger Bands Plot
@@ -159,7 +160,7 @@ fig_bb = go.Figure()
 fig_bb.add_trace(go.Scatter(x=a.index[-200:], y=a['Close'][-200:], mode='lines', name='Close Price'))
 fig_bb.add_trace(go.Scatter(x=a.index[-200:], y=a['Bollinger_Lower'][-200:], mode='lines', name='Lower Band', line=dict(dash='dash')))
 fig_bb.add_trace(go.Scatter(x=a.index[-200:], y=a['Bollinger_Upper'][-200:], mode='lines', name='Upper Band', line=dict(dash='dash')))
-fig_bb.update_layout(title='Bollinger Bands', autosize=True,width=350, height=350)
+fig_bb.update_layout(title='Bollinger Bands', autosize=True,width=350, height=350, showlegend=False)
 st.plotly_chart(fig_bb, use_container_width=False)
 
 
@@ -397,7 +398,7 @@ if st.button('Run SARIMAX Model'):
     # Setting the layout of the chart, with a specified width and height.
     # autosize=False: Disabling autosize to manually set the size of the chart.
     # width=1200 and height=700: Setting the width and height of the chart.
-    fig2.update_layout(autosize=True,width=350, height=350)
+    fig2.update_layout(autosize=False,width=350, height=350)
 
     # Using Streamlit to display the chart on the web application.
     # use_container_width=False: Specifying that the chart should not adjust its width to the container.
