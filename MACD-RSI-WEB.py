@@ -9,8 +9,21 @@ from statsmodels.tsa.arima.model import ARIMA
 from pmdarima import auto_arima
 import streamlit as st
 import plotly.graph_objects as go
+
 st.set_page_config(layout="wide")
 
+# Function to hide Streamlit branding and sidebar
+def hide_streamlit_branding():
+    st.markdown("""
+        <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+        </style>
+    """, unsafe_allow_html=True)
+
+# Call the function to apply the style
+hide_streamlit_branding()
 
 st.write("""
 # Forecasting Future Value - Stay Goated
