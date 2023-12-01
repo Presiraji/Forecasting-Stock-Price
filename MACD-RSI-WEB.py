@@ -47,7 +47,7 @@ st.write('The current value of S is:', S)
 
 
 # User input for start and end dates
-start_date = st.date_input("Start Date YYYY-MM_DD", pd.to_datetime("2021-10-09"))
+start_date = st.date_input("Start Date YYYY-MM_DD", pd.to_datetime("2020-03-23"))
 end_date = st.date_input("End Date YYYY-MM_DD ", pd.to_datetime("2023-10-09"))
 
 
